@@ -1,9 +1,9 @@
 <?php
-$host   = "localhost";
+$host   = "thomas.proxy.rlwy.net";
 $user   = "root";
-$pass   = "";
+$pass   = "oSOBHvsrybevpwKsnjRsNTaXmJkqVtOQ";
 $dbname = "brew_bean";
-$port   = 3306;
+$port   = 31906;
 
 $conn = mysqli_connect($host, $user, $pass, $dbname, $port);
 
