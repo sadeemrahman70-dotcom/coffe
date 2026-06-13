@@ -1,11 +1,12 @@
 <?php
-$host   = "thomas.proxy.rlwy.net";
-$user   = "root";
-$pass   = "oSOBHvsrybevpwKsnjRsNTaXmJkqVtOQ";
-$dbname = "brew_bean";
-$port   = 31906;
 
-$conn = mysqli_connect($host, $user, $pass, $dbname, $port);
+$conn = mysqli_connect(
+    getenv('MYSQLHOST'),
+    getenv('MYSQLUSER'),
+    getenv('MYSQLPASSWORD'),
+    getenv('MYSQLDATABASE'),
+    getenv('MYSQLPORT')
+);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
